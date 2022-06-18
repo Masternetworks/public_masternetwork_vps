@@ -8,7 +8,7 @@ try:
     jsonResponse = response.json()
     content = jsonResponse["content"]
 
-    file_path = "frpc.ini"
+    file_path = "/var/mydir/frp/frp_0.42.0_linux_amd64/frpc.ini"
     with open(file_path, "r") as txt_file:
         current_content =  txt_file.readlines()
     if content != current_content :
@@ -19,7 +19,7 @@ try:
         f = open(file_path, "w")
         f.write(content)
         f.close()
-        os.exec("frpc reload -c ./frpc.ini")
+        os.exec("frpc reload -c ./var/mydir/frp/frp_0.42.0_linux_amd64/frpc.ini")
     else :
         quit()
 
