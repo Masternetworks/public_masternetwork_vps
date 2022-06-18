@@ -19,6 +19,7 @@ try:
         f = open(file_path, "w")
         f.write(content)
         f.close()
+        os.exec("frpc reload -c ./frpc.ini")
     else :
         quit()
 
