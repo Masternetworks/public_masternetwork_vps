@@ -19,7 +19,7 @@ try:
         f = open(file_path, "w")
         f.write(content)
         f.close()
-        os.system("./var/mydir/frp/frp_0.42.0_linux_amd64/frpc reload -c ./var/mydir/frp/frp_0.42.0_linux_amd64/frpc.ini")
+        os.system("cd /var/mydir/frp/frp_0.42.0_linux_amd64/ && ./frpc reload -c ./var/mydir/frp/frp_0.42.0_linux_amd64/frpc.ini")
     else :
         quit()
 
