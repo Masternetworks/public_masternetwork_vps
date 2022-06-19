@@ -2,7 +2,6 @@ import requests, os, sys, time
 from requests.exceptions import HTTPError
 
 while True :
-    requests.get('https://api.masternetwork.dev/FRPCupdated/'+ sys.argv[1])
     response = requests.get('https://api.masternetwork.dev/FRPCdemand/'+ sys.argv[1])
     response.raise_for_status()
     # access JSOn content
