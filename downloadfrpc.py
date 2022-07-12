@@ -13,6 +13,6 @@ else :
     f = open(file_path, "w")
     f.write(content)
     f.close()
-    os.system("cd /var/mydir/frp/frp_0.42.0_linux_amd64/ && ./frpc -c ./frpc.ini")
+    os.system("cd /var/mydir/frp/frp_0.42.0_linux_amd64/ && sudo ./frpc -c ./frpc.ini")
     time.sleep(60)
 
