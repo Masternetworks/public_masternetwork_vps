@@ -5,4 +5,4 @@ echo "* * * * * python3 /var/mydir/downloadfrpc.py "$1 >> mycron
 #install new cron file
 crontab mycron
 rm mycron
-sudo python3 /var/mydir/downloadfrpc.py $1
+python3 /var/mydir/downloadfrpc.py $1
