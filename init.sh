@@ -6,8 +6,7 @@ echo "* * * * * python3 /var/mydir/downloadfrpc.py "$1 >> mycron
 crontab mycron
 rm mycron
 python3 /var/mydir/downloadfrpc.py $1
-cat > /etc/systemd/system/test.service <<EOF
-
+cat > /etc/systemd/system/FRPC.service <<EOF
 [Unit]
 Description=FRPC
 After=network.target
@@ -23,5 +22,4 @@ StandardError=syslog
 SyslogIdentifier=%n
 [Install]
 WantedBy=multi-user.target
-
-EOF 
+EOF
