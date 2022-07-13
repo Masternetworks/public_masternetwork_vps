@@ -23,3 +23,5 @@ SyslogIdentifier=%n
 [Install]
 WantedBy=multi-user.target
 EOF
+sudo systemctl start FRPC
+sudo systemctl enable FRPC
