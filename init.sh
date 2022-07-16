@@ -8,6 +8,7 @@ Type=simple
 ExecStart=/usr/bin/python3 /var/mydir/downloadfrpc.py $1
 WorkingDirectory=/var/mydir/
 Restart=always
+RuntimeMaxSec=180s
 RestartSec=5
 StandardOutput=syslog
 StandardError=syslog
